@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>System Info App</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+
+    <style>
+        span {
+            color: red;
+        }
+
+        .nav-pills .nav-link {
+            border-radius: 0px !important;
+            background-color: white;
+            text-transform: capitalize;
+            transition: ease-in-out 0.5s;
+            color: black;
+        }
+
+        .nav-pills .nav-link.active {
+            border-radius: 0px !important;
+            background-color: red;
+        }
+
+
+
+        .main {
+            width: 100%;
+            height: 100vh;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- tabs start -->
+    <div class="d-flex align-items-start shadow mx-auto  rounded main">
+        <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+            <button class="nav-link active" id="v-pills-os-tab" data-bs-toggle="pill" data-bs-target="#v-pills-os"
+                type="button" role="tab" aria-controls="v-pills-os" aria-selected="true">OS</button>
+            <button class="nav-link" id="v-pills-cpu-tab" data-bs-toggle="pill" data-bs-target="#v-pills-cpu"
+                type="button" role="tab" aria-controls="v-pills-cpu" aria-selected="false">CPU</button>
+            <button class="nav-link" id="v-pills-memory-tab" data-bs-toggle="pill" data-bs-target="#v-pills-memory"
+                type="button" role="tab" aria-controls="v-pills-memory" aria-selected="false">MEMORY</button>
+            <button class="nav-link" id="v-pills-network-tab" data-bs-toggle="pill" data-bs-target="#v-pills-network"
+                type="button" role="tab" aria-controls="v-pills-network" aria-selected="false">NETWORK</button>
+        </div>
+        <div class="tab-content" id="v-pills-tabContent">
+            <div class="tab-pane fade show active" id="v-pills-os" role="tabpanel" aria-labelledby="v-pills-os-tab">
+
+                <!-- os -->
+                <div class="mt-3 px-3 mx-auto rounded">
+                    <h5 class="mb-3">Operating System</h5>
+                    <div class="os-info">
+                        <p>Platform : <span class="platform"> </span> </p>
+                        <p>Host Name : <span class="hostname"> </span> </p>
+                        <p>Distro : <span class="distro"> </span> </p>
+                        <p>kernal : <span class="kernal"> </span> </p>
+                        <p>Os verison : <span class="release"> </span> </p>
+                    </div>
+                </div>
+
+                <!-- os -->
+            </div>
+            <div class="tab-pane fade" id="v-pills-cpu" role="tabpanel" aria-labelledby="v-pills-cpu-tab">
+
+
+                <!-- cpu -->
+                <div class=" mt-3 px-3 mx-auto rounded">
+                    <h5 class="mb-3">CPU</h5>
+                    <div class=" os-info">
+                        <p>Processor : <span class="cpu-processor"> </span> </p>
+                        <p>Cores : <span class="cpu-cores"> </span> </p>
+                        <p>Generation : <span class="cpu-generation"> </span> </p>
+                        <p>Cpu Brand : <span class="cpu-brand"> </span> </p>
+                        <p>Base Clock Speed : <span class="base-clock-speed"> </span> </p>
+                        <p>Max Clock Speed : <span class="max-clock-speed"> </span> </p>
+                    </div>
+                </div>
+                <!-- cpu -->
+            </div>
+            <div class="tab-pane fade" id="v-pills-memory" role="tabpanel" aria-labelledby="v-pills-memory-tab">
+
+                <!-- ram -->
+
+
+
+                <div class="mt-3 mx-3 mx-auto rounded">
+                    <h5 class="mb-3">Memory</h5>
+                    <div class="">
+                        <p>Total Ram : <span class="ram-total"> </span> </p>
+                        <p>Used : <span class="ram-used"> </span> </p>
+                        <p>Free : <span class="ram-free"> </span> </p>
+                        <p>Total Swap : <span class="ram-swap-total"> </span> </p>
+                        <p>Free Swap : <span class="ram-swap-free"> </span> </p>
+                        <p>Used Swap: <span class="ram-swap-used"> </span> </p>
+                    </div>
+                </div>
+
+
+                <!-- ram -->
+            </div>
+
+
+            <div class="tab-pane fade" id="v-pills-network" role="tabpanel" aria-labelledby="v-pills-network-tab">
+
+
+                <!-- network -->
+                <div class=" mt-3 px-3 mx-auto rounded">
+                    <h5 class="mb-3">WIFI</h5>
+                    <div>
+                        <h6>
+                            Connected Networks
+                        </h6>
+                        <div class="connected-list">
+                            <!-- <div class="alert alert-success">
+                            GFY
+                        </div> -->
+                        </div>
+                    </div>
+                    <div class="">
+                        <h6>Available Wifi</h6>
+                        <div>
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">#</th>
+                                        <th scope="col">SSID</th>
+                                        <th scope="col">Channel</th>
+                                        <th scope="col">Signal Quality</th>
+                                        <th scope="col">Security</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="wifi-list">
+                                    <!-- <tr>
+                                    <th scope="row">1</th>
+                                    <td>Mark</td>
+                                    <td>Otto</td>
+                                    <td>@mdo</td>
+                                </tr> -->
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- network -->
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- tabs end -->
+
+
+
+
+
+
+
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src=></script>
+</body>
+
+</html>
